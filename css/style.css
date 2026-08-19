@@ -168,6 +168,43 @@ img{ max-width: 100%; display: block; }
   font-size: 1.15rem;
   color: var(--ink-soft);
 }
+.hero-split{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 44px;
+  align-items: start;
+  text-align: left;
+  margin-top: 10px;
+}
+@media (min-width: 760px){
+  .hero-split{ grid-template-columns: 1.15fr 0.85fr; gap: 56px; }
+}
+.hero-split .hero-text{ max-width: 100%; }
+.hero-split .thesis{ margin: 0 0 4px; text-align: left; max-width: none; }
+.hero-split .question-list{ margin: 26px 0 0; max-width: none; }
+.hero-photo{
+  margin: 0;
+  background: var(--paper-dark);
+  border: 1px solid var(--paper-line);
+  border-radius: 3px;
+  padding: 10px 10px 14px;
+  box-shadow: 0 10px 22px -10px rgba(42,36,32,0.4);
+  transform: rotate(1deg);
+}
+.hero-photo img{
+  width: 100%;
+  border-radius: 2px;
+  filter: sepia(0.12) contrast(1.02);
+}
+.hero-photo figcaption{
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  text-align: center;
+  margin-top: 10px;
+}
 .question-list{
   counter-reset: qnum;
   list-style: none;
